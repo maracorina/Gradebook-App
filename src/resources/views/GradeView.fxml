@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="/themes/Theme.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GradeController">
+   <left>
+      <AnchorPane>
+         <children>
+            <GridPane layoutX="101.0" layoutY="51.0" prefHeight="271.0" prefWidth="350.0" AnchorPane.bottomAnchor="130.0" AnchorPane.leftAnchor="60.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="150.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="250.0" minWidth="10.0" prefWidth="200.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                   <ComboBox fx:id="inputGroupBox" onAction="#handleGroupBox" prefWidth="200d" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <TextArea fx:id="inputFeedback" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <ComboBox fx:id="inputTaskBox" onAction="#handleTaskBox" prefWidth="200d" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="inputNota" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="inputCadruBox" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <ComboBox fx:id="inputStudentBox" onAction="#updateStudentGrades" prefWidth="200d" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                   <Label text="Grupa" textFill="WHITE" GridPane.rowIndex="3">
+                       <font>
+                           <Font name="Futena" size="20.0" />
+                       </font></Label>
+                  <Label text="Student" textFill="WHITE" GridPane.rowIndex="0">
+                     <font>
+                        <Font name="Futena" size="20.0" />
+                     </font></Label>
+                  <Label text="Tema" textFill="WHITE" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Futena" size="20.0" />
+                     </font></Label>
+                   <Label text="Nota" textFill="WHITE" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Futena" size="20.0" />
+                     </font></Label>
+                   <Label text="Cadru didactic" textFill="WHITE" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Futena" size="20.0" />
+                     </font></Label>
+                   <Label text="Feedback" textFill="WHITE" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Futena" size="20.0" />
+                     </font></Label>
+               </children>
+            </GridPane>
+             <Button onAction="#handleMotivateAbsence" prefHeight="25" prefWidth="260" stylesheets="/themes/ThemeButton.css" text="Motivare" AnchorPane.bottomAnchor="430.0" AnchorPane.leftAnchor="489.0" />
+            <TableView fx:id="tableViewNote" layoutX="310.0" onMouseClicked="#handleListSelection" prefHeight="290.0" prefWidth="280.0" stylesheets="/themes/Theme1.css" AnchorPane.bottomAnchor="127.0" AnchorPane.leftAnchor="480.0">
+              <columns>
+                <TableColumn fx:id="tableColumnName" prefWidth="110.0" text="Student" />
+                <TableColumn fx:id="tableColumnTema" prefWidth="110" text="Tema" />
+                  <TableColumn fx:id="tableColumnNota" prefWidth="56.0" text="Nota" />
+              </columns>
+            </TableView>
+            <HBox spacing="50.0" AnchorPane.bottomAnchor="20d" AnchorPane.leftAnchor="330d">
+               <children>
+                  <Button fx:id="buttonStudents" onAction="#handleSetStudentView" stylesheets="/themes/Teme2Button.css">
+                     <graphic>
+                         <ImageView>
+                             <image>
+                                 <Image url="/images/student.png" />
+                             </image>
+                         </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="buttonGrades" onAction="#handleSetGradeView" stylesheets="/themes/Teme2Button.css">
+                      <graphic>
+                          <ImageView>
+                              <image>
+                                  <Image url="/images/grade.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+                  <Button fx:id="buttonTasks" onAction="#handleSetTaskView" stylesheets="/themes/Teme2Button.css">
+                      <graphic>
+                          <ImageView>
+                              <image>
+                                  <Image url="/images/task.png" />
+                              </image>
+                          </ImageView>
+                      </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox spacing="50.0" AnchorPane.leftAnchor="217d" AnchorPane.topAnchor="40d">
+               <children>
+                  <Button onAction="#handleAdd" prefHeight="50" prefWidth="60" stylesheets="/themes/ThemeButton.css" text="Add" />
+                  <VBox spacing="16.0">
+                     <children>
+                        <CheckBox fx:id="checkStudent" onAction="#handleCheckStudent" text="Student" textFill="WHITE" />
+                        <CheckBox fx:id="checkGroup" onAction="#handleCheckGroup" text="Grupa" textFill="WHITE" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </left>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <VBox spacing="30.0" prefHeight="290.0" prefWidth="280.0" stylesheets="/themes/ThemeMeniu.css" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="40.0">
+               <children>
+                   <Button onAction="#handleTaskGrades" prefHeight="30" prefWidth="150" stylesheets="/themes/ThemeFilterButton.css" text="Task grades" />
+                   <Button onAction="#handleStudentGrades" prefHeight="30" prefWidth="150" stylesheets="/themes/ThemeFilterButton.css" text="Student grades" />
+                   <Button onAction="#handleTaskGroupGrades" prefHeight="30" prefWidth="150" stylesheets="/themes/ThemeFilterButton.css" text="Group task grades" />
+                   <Button onAction="#handleGroupGrades" prefHeight="30" prefWidth="150" stylesheets="/themes/ThemeFilterButton.css" text="Group grades" />
+               </children></VBox>
+         </children></AnchorPane>
+   </right>
+</BorderPane>

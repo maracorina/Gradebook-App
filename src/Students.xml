@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <Student id="1">
+        <nume>Mara Corina</nume>
+        <grupa>4</grupa>
+        <email>mara_corina@scs.ubbcluj.ro</email>
+    </Student>
+    <Student id="2">
+        <nume>Luca Bogdan</nume>
+        <grupa>4</grupa>
+        <email>luca_bogdan@scs.ubbcluj.ro</email>
+    </Student>
+    <Student id="3">
+        <nume>Linca Razvan</nume>
+        <grupa>4</grupa>
+        <email>linca_razvan@scs.ubbcluj.ro</email>
+    </Student>
+    <Student id="4">
+        <nume>Lungu Ionut</nume>
+        <grupa>4</grupa>
+        <email>lungu_ionut@scs.ubbcluj.ro</email>
+    </Student>
+    <Student id="5">
+        <nume>Iulia Thira</nume>
+        <grupa>7</grupa>
+        <email>iulia_thira@scs.ubbcluj.ro</email>
+    </Student>
+    <Student id="6">
+        <nume>Geo Badita</nume>
+        <grupa>1</grupa>
+        <email>geo@scs.ubbcluj.ro</email>
+    </Student>
+    <Student id="7">
+        <nume>Dragos Bilaniuc</nume>
+        <grupa>1</grupa>
+        <email>bilaniuc@scs.ubbcluj.ro</email>
+    </Student>
+</root>

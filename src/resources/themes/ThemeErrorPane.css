@@ -1,0 +1,55 @@
+.dialog-pane{
+    -fx-background-color:#1A314E;
+    -fx-border-color:#1A314E;
+    -fx-border-width:2.0px;
+}
+
+.dialog-pane > .button-bar > .container {
+    -fx-background-color:#1A314E;
+}
+
+.dialog-pane > .content.label {
+    -fx-padding: 0.5em 0.5em 0.5em 0.5em;
+    -fx-background-color: linear-gradient(#F9A397, #F04C36),
+    linear-gradient(#FECCC6, #F9A397),
+    linear-gradient(#FECCC6, #F9A397),
+    linear-gradient(#FECCC6 0%, #F9A397 50%, #FC4C37 100%),
+    linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-text-fill:black;
+    -fx-font-size:15.0px;
+}
+
+
+.dialog-pane > .header-panel .label{
+    -fx-text-fill:WHITE;
+    -fx-font-size:15.0px;
+}
+
+.dialog-pane:top .header-panel {
+    -fx-background-color: #1A314E;
+}
+
+.dialog-pane:top .header-panel .label{
+    -fx-background-color: linear-gradient(#F9A397, #F04C36),
+    linear-gradient(#FECCC6, #F9A397),
+    linear-gradient(#FECCC6, #F9A397),
+    linear-gradient(#FECCC6 0%, #F9A397 50%, #FC4C37 100%),
+    linear-gradient(from 0% 0% to 15% 50%, rgba(255,255,255,0.9), rgba(255,255,255,0));
+    -fx-background-radius:10px;
+    -fx-text-fill:black;
+    -fx-font-size:15.0px;
+}
+
+.dialog-pane .button{
+    -fx-background-color:white;
+    -fx-text-fill:#1A314E;
+    -fx-wrap-text: true;
+    -fx-effect: dropshadow( three-pass-box, #88F5FF, 10.0, 0.0, 0.0, 0.0);
+    -fx-cursor:hand;
+}
+
+.dialog-pane .button:hover{
+    -fx-background-color:white;
+    -fx-text-fill:black;
+    -fx-font-weight:bold;
+}

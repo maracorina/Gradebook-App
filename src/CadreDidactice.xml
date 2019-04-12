@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+    <CadruDidactic id="1">
+        <nume>Camelia Serban</nume>
+        <email>camelia.serban@scs.ubbcluj.ro</email>
+        <materie>MAP</materie>
+    </CadruDidactic>
+    <CadruDidactic id="2">
+        <nume>Istvan Czibula</nume>
+        <email>istvanc@scs.ubbcluj.ro</email>
+        <materie>OOP</materie>
+    </CadruDidactic>
+</root>
